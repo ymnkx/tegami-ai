@@ -11,7 +11,7 @@ document.querySelector('#app').innerHTML = `
         </div>
         <h1 class="hero-title">手紙で届ける、AIが綴る<br><span class="highlight">あなたの気持ち。</span></h1>
         <p class="hero-subtitle">AIがあなたの想いを温かな手紙に。<br>伝えたい気持ちを、美しい言葉で届けます。</p>
-        <button class="hero-cta">手紙をつくる</button>
+        <button class="hero-cta">手紙を綴る</button>
         <p class="hero-note">無料で今すぐはじめる</p>
       </div>
     </section>
