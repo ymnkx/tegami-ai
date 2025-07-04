@@ -397,17 +397,17 @@ body {
     margin-bottom: 1rem;
   }
 
-  .hero-title {
+  /* .hero-title {
     font-size: 2.8rem;
-  }
+  } */
 
   .section-title {
     font-size: 2.2rem;
   }
 
   .hero-logo {
-    width: 320px;
-    height: 320px;
+    width: 100%;
+    height: auto;
   }
 }
 
@@ -417,16 +417,16 @@ body {
     max-width: 1000px;
   }
 
-  .hero-title {
+  /* .hero-title {
     font-size: 3.2rem;
-  }
+  } */
 
   .hero-subtitle {
     font-size: 1.2rem;
   }
 
   .hero-logo {
-    width: 380px;
-    height: 380px;
+    width: 100%;
+    height: auto;
   }
 }
