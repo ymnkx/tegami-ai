@@ -1,0 +1,413 @@
+/* リセットとベーススタイル */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'Yu Gothic Medium',
+    'Meiryo', sans-serif;
+  line-height: 1.7;
+  color: #333;
+  scroll-behavior: smooth;
+  background: #fefefe;
+}
+
+.container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ヒーローセクション */
+.hero {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #fff5f8 0%, #fef7fa 50%, #fff5f8 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #333;
+  position: relative;
+  overflow: hidden;
+  padding: 40px 0;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="dots" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="1" fill="%23ed7d95" opacity="0.05"/></pattern></defs><rect width="100" height="100" fill="url(%23dots)"/></svg>');
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 460px;
+  padding: 0 20px;
+}
+
+.hero-visual {
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.hero-logo {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 8px 16px rgba(237, 125, 149, 0.25));
+  animation: logoFloat 3s ease-in-out infinite;
+}
+
+@keyframes logoFloat {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.letter-animation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.envelope,
+.heart {
+  font-size: 3rem;
+  transition: all 0.3s ease;
+  filter: drop-shadow(0 4px 8px rgba(237, 125, 149, 0.2));
+}
+
+.hero-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  animation: fadeInUp 1s ease-out;
+  line-height: 1.4;
+}
+
+.highlight {
+  background: linear-gradient(135deg, #ed7d95 0%, #f4a6cd 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 800;
+}
+
+.hero-subtitle {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  opacity: 0.8;
+  animation: fadeInUp 1s ease-out 0.2s both;
+  line-height: 1.6;
+}
+
+.hero-cta {
+  background: linear-gradient(135deg, #ed7d95 0%, #f4a6cd 100%);
+  color: white;
+  border: none;
+  padding: 16px 32px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  animation: fadeInUp 1s ease-out 0.4s both;
+  box-shadow: 0 10px 30px rgba(237, 125, 149, 0.3);
+  min-width: 200px;
+}
+
+.hero-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 40px rgba(237, 125, 149, 0.4);
+}
+
+.hero-note {
+  margin-top: 0.8rem;
+  font-size: 0.85rem;
+  color: #666;
+  opacity: 0.8;
+}
+
+/* 特徴セクション */
+.features {
+  padding: 4rem 0;
+  background: white;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 2.5rem;
+  color: #333;
+  line-height: 1.4;
+}
+
+.features-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.feature-card {
+  background: linear-gradient(135deg, #fff5f8 0%, #fefbfc 100%);
+  padding: 1.8rem 1.5rem;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 5px 25px rgba(237, 125, 149, 0.08);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(237, 125, 149, 0.1);
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.feature-card.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(237, 125, 149, 0.15);
+}
+
+.feature-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  filter: drop-shadow(0 2px 4px rgba(237, 125, 149, 0.2));
+}
+
+.feature-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: #ed7d95;
+  font-weight: 700;
+}
+
+.feature-card p {
+  color: #666;
+  line-height: 1.6;
+  font-size: 0.9rem;
+}
+
+/* 使い方セクション */
+.how-it-works {
+  padding: 4rem 0;
+  background: linear-gradient(135deg, #fff5f8 0%, #fef7fa 100%);
+}
+
+.steps {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.step {
+  display: flex;
+  align-items: center;
+  background: white;
+  padding: 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 5px 20px rgba(237, 125, 149, 0.08);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.3s ease;
+}
+
+.step.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.step-number {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, #ed7d95 0%, #f4a6cd 100%);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-right: 1rem;
+  flex-shrink: 0;
+}
+
+.step h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.3rem;
+  color: #333;
+  font-weight: 600;
+}
+
+.step p {
+  color: #666;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+/* CTAセクション */
+.cta {
+  padding: 4rem 0;
+  background: linear-gradient(135deg, #ed7d95 0%, #f4a6cd 100%);
+  text-align: center;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="hearts" width="40" height="40" patternUnits="userSpaceOnUse"><text x="20" y="25" text-anchor="middle" font-size="20" fill="white" opacity="0.1">💌</text></pattern></defs><rect width="100" height="100" fill="url(%23hearts)"/></svg>');
+}
+
+.cta-content {
+  position: relative;
+  z-index: 1;
+}
+
+.cta-title {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.cta-subtitle {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+.cta-button {
+  background: white;
+  color: #ed7d95;
+  border: none;
+  padding: 16px 32px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  min-width: 200px;
+}
+
+.cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.cta-note {
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  opacity: 0.8;
+}
+
+/* フッター */
+.footer {
+  background: #f8f9fa;
+  padding: 2rem 0;
+  text-align: center;
+  border-top: 1px solid rgba(237, 125, 149, 0.1);
+}
+
+.footer p {
+  color: #666;
+  font-size: 0.85rem;
+}
+
+/* アニメーション */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* タブレット以上のサイズ */
+@media (min-width: 768px) {
+  .container {
+    max-width: 800px;
+  }
+
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+  }
+
+  .steps {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .step {
+    flex-direction: column;
+    text-align: center;
+    flex: 1;
+  }
+
+  .step-number {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+
+  .hero-title {
+    font-size: 2.8rem;
+  }
+
+  .section-title {
+    font-size: 2.2rem;
+  }
+
+  .hero-logo {
+    width: 320px;
+    height: 320px;
+  }
+}
+
+/* デスクトップサイズ */
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1000px;
+  }
+
+  .hero-title {
+    font-size: 3.2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.2rem;
+  }
+
+  .hero-logo {
+    width: 380px;
+    height: 380px;
+  }
+}
