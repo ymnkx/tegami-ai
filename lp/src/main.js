@@ -5,13 +5,11 @@ document.querySelector('#app').innerHTML = `
     <section class="hero">
       <div class="hero-content">
         <div class="hero-visual">
-          <img src="/logo.png" alt="TegamiAI" class="hero-logo" />
-          <div class="letter-animation">
-            <div class="envelope">📮</div>
-            <div class="heart">💌</div>
-          </div>
+          <img src="./logo.png" alt="TegamiAI" class="hero-logo" />
+          <img src="./robo.png" alt="TegamiAI Robot" class="hero-robot" />
+
         </div>
-        <h1 class="hero-title">気持ちを<br><span class="highlight">手紙</span>にしよう</h1>
+        <h1 class="hero-title">手紙で届ける、AIが綴る<br><span class="highlight">あなたの気持ち。</span></h1>
         <p class="hero-subtitle">AIがあなたの想いを温かな手紙に。<br>伝えたい気持ちを、美しい言葉で届けます。</p>
         <button class="hero-cta">手紙をつくる</button>
         <p class="hero-note">無料で今すぐはじめる</p>

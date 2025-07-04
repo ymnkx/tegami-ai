@@ -52,7 +52,7 @@ body {
 }
 
 .hero-visual {
-  margin-bottom: 2rem;
+  margin-bottom: 7rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -67,6 +67,15 @@ body {
   animation: logoFloat 3s ease-in-out infinite;
 }
 
+.hero-robot {
+  width: 80%;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 6px 12px rgba(237, 125, 149, 0.2));
+  animation: robotFloat 3s ease-in-out infinite 0.5s;
+  margin: -90px;
+}
+
 @keyframes logoFloat {
   0%,
   100% {
@@ -74,6 +83,16 @@ body {
   }
   50% {
     transform: translateY(-10px);
+  }
+}
+
+@keyframes robotFloat {
+  0%,
+  100% {
+    transform: translateY(-5px);
+  }
+  50% {
+    transform: translateY(5px);
   }
 }
 
